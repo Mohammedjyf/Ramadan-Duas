@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #008080;
+    color: white;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+/* اختيار تاريخ بداية رمضان */
+.date-picker {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+/* الحاوية السداسية */
+.hexagon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* تصميم الأيقونات السداسية */
+.hexagon {
+    width: 60px;
+    height: 70px;
+    background-color: #008080;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 70px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hexagon:before, .hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+
+.hexagon:before {
+    top: -15px;
+    border-bottom: 15px solid #008080;
+}
+
+.hexagon:after {
+    bottom: -15px;
+    border-top: 15px solid #008080;
+}
+
+/* الأيام المقضية */
+.hexagon.past {
+    background: yellow;
+    color: black;
+}
+
+.hexagon.past:before {
+    border-bottom-color: yellow;
+}
+
+.hexagon.past:after {
+    border-top-color: yellow;
+}
+
+/* تحسين استجابة النافذة المنبثقة */
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #f5f5dc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* تخصيص زر الإغلاق */
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* أزرار التحكم في الخط */
+.font-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.font-controls button {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 5px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدعية رمضان</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>أدعية شهر رمضان</h2>
+
+    <!-- اختيار تاريخ بداية رمضان -->
+    <div class="date-picker">
+        <label>حدد تاريخ بداية رمضان:</label>
+        <select id="day"></select>
+        <select id="month"></select>
+        <select id="year"></select>
+        <button onclick="saveRamadanStart()">حفظ</button>
+    </div>
+
+    <p id="remainingMessage">الأيام المتبقية لشهر رمضان:</p>
+
+    <!-- الأيقونات اليومية -->
+    <div class="hexagon-container"></div>
+
+    <!-- النافذة المنبثقة لعرض الدعاء -->
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h3 id="popupTitle"></h3>
+        <p id="popupText"></p>
+
+        <div class="font-controls">
+            <button onclick="changeFontSize(2)">➕</button>
+            <button onclick="changeFontSize(-2)">➖</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
