@@ -85,12 +85,11 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 90%; /* تم التعديل هنا: أقل من 100% لترك مسافة */
-    max-height: 90vh; /* تم التعديل هنا: أقل من 100vh لترك مسافة */
+    max-width: 95%; /* تكبير النافذة */
+    max-height: 90vh; /* تكبير النافذة */
     overflow: hidden; /* لمنع التمرير الخارجي */
-    margin: 10px; /* تم التعديل هنا: إضافة مسافة بسيطة حول النافذة */
+    margin: 5px; /* تقليل المسافة البيضاء */
 }
-
 .popup-content {
     text-align: center;
     max-height: 70vh; /* ارتفاع مناسب للمحتوى */
