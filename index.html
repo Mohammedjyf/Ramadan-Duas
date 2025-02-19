@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدعية شهر رمضان</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- عبارة فوق مزار كميل بن زياد -->
+        <div class="header">
+            <h1>الامانة الخاصة مزار كميل بن زياد <span class="blessing">(رض)</span></h1>
+            <h2>أدعية شهر رمضان المبارك</h2>
+        </div>
+
+        <!-- التحكم في التاريخ -->
+        <div class="controls">
+            <p>قم بتحديد بداية شهر رمضان</p>
+            <input type="date" id="startDate" />
+            <button onclick="setStartDate()">حفظ تاريخ بداية الشهر</button>
+            <p id="remainingDays"></p>
+        </div>
+
+        <!-- الأيقونات -->
+        <div class="honeycomb">
+            <!-- سيتم إضافة الأيام هنا عبر JavaScript -->
+        </div>
+    </div>
+
+    <!-- النافذة المنبثقة -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p id="popupText"></p>
+            <button onclick="increaseFont()">تكبير الخط</button>
+            <button onclick="decreaseFont()">تصغير الخط</button>
+            <button class="confirm-button" onclick="closePopup()">✓</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
