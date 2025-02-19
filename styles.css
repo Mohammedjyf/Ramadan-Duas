@@ -78,15 +78,15 @@ body {
 .popup {
     display: none;
     position: fixed;
-    top: 5%;
-    left: 5%;
-    transform: translate(-25%, -25%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-5%, -5%);
     background-color: #f5f5dc; /* بيجي فاتح */
-    padding: 60px 60px;
+    padding: 100px 100px;
     border-radius: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 90%; /* تناسب مع الشاشة */
-    max-height: 80vh; /* ارتفاع مناسب */
+    max-width: 99%; /* تناسب مع الشاشة */
+    max-height: 90vh; /* ارتفاع مناسب */
     overflow: hidden; /* لمنع التمرير الخارجي */
 }
 
