@@ -75,7 +75,7 @@ body {
     background-color: #32cd32; /* أخضر */
 }
 /* الايقونة المنبثقة*/
-..popup {
+.popup {
     display: none;
     position: fixed;
     top: 50%;
@@ -89,6 +89,18 @@ body {
     max-height: 90vh; /* تم التعديل هنا: أقل من 100vh لترك مسافة */
     overflow: hidden; /* لمنع التمرير الخارجي */
     margin: 10px; /* تم التعديل هنا: إضافة مسافة بسيطة حول النافذة */
+}
+
+.popup-content {
+    text-align: center;
+    max-height: 70vh; /* ارتفاع مناسب للمحتوى */
+    overflow-y: auto; /* تمكين التمرير عند التكبير */
+    padding-right: 10px; /* لمنع التداخل مع شريط التمرير */
+}
+
+.popup-content p {
+    margin: 0;
+    padding: 10px 0;
 }
 .popup-content p {
     margin: 0;
