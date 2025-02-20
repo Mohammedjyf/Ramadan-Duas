@@ -80,19 +80,20 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-30%, -30%);
+    transform: translate(-50%, -50%);
     background-color: #f5f5dc; /* بيجي فاتح */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 130%; /* تكبير النافذة */
-    max-height: 150vh; /* تكبير النافذة */
-    overflow: hidden; /* لمنع التمرير الخارجي */
-    margin: 5px; /* تقليل المسافة البيضاء */
+    width: 90vw; /* عرض النافذة بنسبة 90% من عرض الشاشة */
+    max-width: 400px; /* أقصى عرض للنافذة */
+    max-height: 80vh; /* أقصى ارتفاع للنافذة */
+    overflow: auto; /* تمكين التمرير إذا كان المحتوى أكبر من النافذة */
 }
+
 .popup-content {
     text-align: center;
-    max-height: 70%; /* ارتفاع مناسب للمحتوى */
+    max-height: 70vh; /* ارتفاع مناسب للمحتوى */
     overflow-y: auto; /* تمكين التمرير عند التكبير */
     padding-right: 10px; /* لمنع التداخل مع شريط التمرير */
 }
@@ -100,8 +101,7 @@ body {
 .popup-content p {
     margin: 0;
     padding: 10px 0;
-}
-.popup-content p {
+}.popup-content p {
     margin: 0;
     padding: 10px 0;
 }
