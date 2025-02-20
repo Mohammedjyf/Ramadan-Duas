@@ -92,7 +92,7 @@ body {
 }
 .popup-content {
     text-align: center;
-    max-height: 70vh; /* ارتفاع مناسب للمحتوى */
+    max-height: 70%; /* ارتفاع مناسب للمحتوى */
     overflow-y: auto; /* تمكين التمرير عند التكبير */
     padding-right: 10px; /* لمنع التداخل مع شريط التمرير */
 }
