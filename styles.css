@@ -40,6 +40,7 @@ body {
 .controls p {
     font-size: 18px;/* جحم المتبقي من الشهر */
     color: #FF0000;
+    font-weight: bold; /* جعل الخط غامقًا */
 }
 
 .honeycomb {
@@ -59,7 +60,8 @@ body {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: bold; /* جعل الخط غامقًا */
     text-align: center;
     padding: 25px;
     width: 25px; /* حجم الأيقونة */
