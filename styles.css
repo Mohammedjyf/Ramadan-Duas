@@ -82,10 +82,10 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #f5f5dc; /* بيجي فاتح */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 90vw; /* عرض النافذة بنسبة 90% من عرض الشاشة */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 95vw; /* عرض النافذة بنسبة 90% من عرض الشاشة */
     max-width: 400px; /* أقصى عرض للنافذة */
     max-height: 80vh; /* أقصى ارتفاع للنافذة */
     overflow: auto; /* تمكين التمرير إذا كان المحتوى أكبر من النافذة */
