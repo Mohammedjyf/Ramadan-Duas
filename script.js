@@ -53,13 +53,14 @@ function generateCalendar() {
     for (let i = 1; i <= 30; i++) {
         const day = document.createElement('div');
         day.classList.add('day');
-        day.textContent = `دعاء اليوم ${i-1}`;
+        day.textContent = `دعاء اليوم ${i}`;
         day.addEventListener('click', () => openPopup(days[i - 1]));
 
-        if (i < daysPassed) {
-            day.classList.add('past');
-        } else if (i === daysPassed) {
-            day.classList.add('current');
+        if (i <= daysPassed) {
+            day.classList.add('past'); // تلوين الأيام الماضية باللون الأصفر
+        }
+        if (i === daysPassed + 1) {
+            day.classList.add('current'); // تلوين اليوم الحالي باللون الأخضر
         }
 
         honeycomb.appendChild(day);
