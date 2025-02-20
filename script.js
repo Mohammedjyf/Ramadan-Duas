@@ -53,7 +53,7 @@ function generateCalendar() {
     for (let i = 1; i <= 30; i++) {
         const day = document.createElement('div');
         day.classList.add('day');
-        day.textContent = `دعاء اليوم ${i}`;
+        day.textContent = `دعاء اليوم ${i-1}`;
         day.addEventListener('click', () => openPopup(days[i - 1]));
 
         if (i < daysPassed) {
