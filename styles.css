@@ -107,6 +107,8 @@ font-weight: bold; /* جعل الخط غامقًا */
 }
 .popup-content {
     text-align: center;
+    font-size: 30px;
+    font-weight: bold; /* جعل الخط غامقًا */
 }
 
 .close {
