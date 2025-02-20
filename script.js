@@ -49,8 +49,7 @@ function generateCalendar() {
         return;
     }
 
-    document.getElementById('remainingDays').textContent = `الأيام المتبقية لنهاية شهر الخير والبركة فاستثمرها: ${remainingDays} أيام`;
-
+    document.getElementById('remainingDays').textContent = ` (${remainingDays}) يوم هي الأيام المتبقية لنهاية شهر الخير والبركة فاستثمرها`;
     for (let i = 1; i <= 30; i++) {
         const day = document.createElement('div');
         day.classList.add('day');
