@@ -6,6 +6,10 @@
     <title>أدعية شهر رمضان</title>
     <!-- إضافة إصدار (versioning) لملف CSS -->
     <link rel="stylesheet" href="styles.css?v=1.1">
+    <!-- إضافة manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- إضافة لون ثيم المتصفح -->
+    <meta name="theme-color" content="#40e0d0">
 </head>
 <body>
     <div class="container">
@@ -42,5 +46,18 @@
 
     <!-- إضافة إصدار (versioning) لملف JS -->
     <script src="script.js?v=1.1"></script>
+
+    <!-- تسجيل Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then((registration) => {
+                    console.log('Service Worker مسجل بنجاح:', registration);
+                })
+                .catch((error) => {
+                    console.log('فشل تسجيل Service Worker:', error);
+                });
+        }
+    </script>
 </body>
 </html>
