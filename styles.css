@@ -19,13 +19,15 @@ body {
 }
 
 .header h1 {
-    font-size: 30px;/* اسم المزار */
+    font-size: 30px; /* اسم المزار */
     color: #40e0d0; /* تركوازي */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* إضافة ظل للنص */
 }
 
 .header h2 {
-    font-size: 25px;/* ادعية شهر رمضان */
+    font-size: 25px; /* أدعية شهر رمضان */
     color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* إضافة ظل للنص */
 }
 
 .blessing {
@@ -38,7 +40,7 @@ body {
 }
 
 .controls p {
-    font-size: 18px;/* جحم المتبقي من الشهر */
+    font-size: 18px; /* حجم المتبقي من الشهر */
     color: #FF0000;
     font-weight: bold; /* جعل الخط غامقًا */
 }
@@ -59,7 +61,7 @@ body {
     align-items: center;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s ease; /* تأثير سلس */
     font-size: 16px;
     font-weight: bold; /* جعل الخط غامقًا */
     text-align: center;
@@ -69,6 +71,15 @@ body {
     margin: 2px; /* فاصل بسيط */
 }
 
+.day:hover {
+    background-color: #20b2aa; /* لون فاتح عند التحويم */
+    transform: scale(1.1); /* تكبير الأيقونة قليلاً */
+}
+
+.day:active {
+    transform: scale(0.9); /* تصغير الأيقونة عند النقر */
+}
+
 .day.past {
     background-color: #ffd700; /* أصفر */
 }
@@ -76,7 +87,7 @@ body {
 .day.current {
     background-color: #32cd32; /* أخضر */
 }
-/* الايقونة المنبثقة*/
+
 .popup {
     display: none;
     position: fixed;
@@ -85,19 +96,20 @@ body {
     transform: translate(-50%, -50%);
     background-color: #f5f5dc; /* بيجي فاتح */
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 95vw; /* عرض النافذة بنسبة 90% من عرض الشاشة */
+    border-radius: 15px; /* زيادة نصف قطر الزوايا */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* ظل أكثر وضوحًا */
+    width: 95vw; /* عرض النافذة بنسبة 95% من عرض الشاشة */
     max-width: 800px; /* أقصى عرض للنافذة */
     max-height: 95vh; /* أقصى ارتفاع للنافذة */
     overflow: auto; /* تمكين التمرير إذا كان المحتوى أكبر من النافذة */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* تأثير سلس */
 }
 
 .popup-content {
     text-align: center;
     font-size: 30px;
-font-weight: bold; /* جعل الخط غامقًا */
-    max-height: 800vh; /* ارتفاع مناسب للمحتوى */
+    font-weight: bold; /* جعل الخط غامقًا */
+    max-height: 80vh; /* ارتفاع مناسب للمحتوى */
     overflow-y: auto; /* تمكين التمرير عند التكبير */
     padding-right: 15px; /* لمنع التداخل مع شريط التمرير */
 }
@@ -105,11 +117,6 @@ font-weight: bold; /* جعل الخط غامقًا */
 .popup-content p {
     margin: 0;
     padding: 15px 0;
-}
-.popup-content {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold; /* جعل الخط غامقًا */
 }
 
 .close {
@@ -131,4 +138,14 @@ font-weight: bold; /* جعل الخط غامقًا */
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* تأثير سلس */
+}
+
+.confirm-button:hover {
+    background-color: #228b22; /* لون أخضر داكن عند التحويم */
+    transform: scale(1.1); /* تكبير الزر قليلاً */
+}
+
+.confirm-button:active {
+    transform: scale(0.9); /* تصغير الزر عند النقر */
 }
